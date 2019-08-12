@@ -26,7 +26,6 @@
     }
     section {
       background-color: white;
-      padding-bottom: 1rem;
       border-radius: .5rem;
       flex: 30% 1 1;
       margin: 1rem 1rem 0;
@@ -35,23 +34,37 @@
     }
     section h2,
     section p {
-      padding: 1rem 1rem 0;
+      padding: 1rem;
     }
     section h2 {
       border-bottom: 1px solid #BABCBE;
-      padding-bottom: .5rem;
+      display: flex;
+      font-size: 1.5rem;
+      align-items: center;
+      padding-top: .25rem;
+      padding-bottom: .25rem;
     }
+    .emoji section h2::before {
+      font-size: 2rem;
+      padding-right: .5rem;
+    }
+    .emoji #hlib h2::before { content: '🍞'; }
+    .emoji #kava h2::before { content: '☕'; }
+    .emoji #pizza h2::before { content: '🍕'; }
+    .emoji #croissant h2::before { content: '🥐'; }
+    .emoji #shortcake h2::before { content: '🍰'; }
+    .emoji #birthday-cake h2::before { content: '🎂'; }
   </style>
 </head>
 
-<body>
+<body class="emoji">
   <header>
     <h1>Хліб Та Кава</h1>
     <h2>Кав’рня-пекарня на Митниці, вул. Гагаріна 29</h2>
   </header>
   <main>
     <section id="hlib">
-      <h2>Хліб</h2>
+      <h2>Хліб</h2> 
       <p>
         Ми продаємо хліб власного виробництва.
         5 видів бездріжджового хлібу. Мінімум дріжджів у житньому хлібі.
@@ -79,10 +92,10 @@
       <p>
         Зранку наші кондитери печуть круасани з 4 видами начинки:
         шоколадна, горіхиво-шоколадна, заварний крем та апельсиновий джем.
-        Сміливо наберіть різних на компанію – не переплутаєте завдяки різному оздоблені.
+        Сміливо наберіть різних на компанію – не переплутаєте завдяки різному <em>оздоблені</em>.
       </p>
     </section>
-    <section>
+    <section id="shortcake">
       <h2>Тістечка</h2>
       <p>
         Після круасанів беремося за тістечка.
@@ -90,7 +103,7 @@
         Продаємо лише свіжі, термін придатності 72 години.
       </p>
     </section>
-    <section id="order-cake">
+    <section id="birthday-cake">
       <h2>Торт на замовлення</h2>
       <p>
         Хочете ще більше солодкої насолоди? Випечемо торт до вашого свята.
@@ -108,6 +121,12 @@
       та у Facebook: <a href="https://facebook.com/hlibtakava/" target="blank">hlibtakava</a>
     </address>
   </footer>
+  <script type="text/javascript">
+    var toggleText = document.querySelector('#croissant em');
+    toggleText.onclick = function () {
+      document.body.classList.toggle('emoji');
+    }
+  </script>
 </body>
 
 </html>
