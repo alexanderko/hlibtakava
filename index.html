@@ -24,9 +24,15 @@
     h1 { 
       font-size: 3rem;
     }
+    header img { 
+      height: 4rem;
+    }
     @media (min-width: 425px) {
       h1 {
         font-size: 3rem;
+      }
+      header img { 
+        height: 6rem;
       }
     }
 
@@ -102,7 +108,14 @@
 
 <body class="emoji" vocab="http://schema.org/" typeof="FoodEstablishment">
   <header>
-    <h1 property="name">Хліб та Кава</h1>
+    <h1 property="name" content="Хліб та Кава">
+      <a property="url" href="http://hlibtakava.ck.ua">
+        <picture>
+          <source property="image" content="logo.svg" srcset="logo.svg" type="image/svg+xml">
+          <img property="logo" url="logo-256.png" alt="Хліб та Кава" src="logo-256.png">
+        </picture>
+      </a>
+    </h1>
     <h2>Кав’рня-пекарня на Митниці, вул. Гагаріна 29,
       <span property="telephone" content="+380632746788">
         <a href="tel:+380632746788">+380 63 274 67 88</a>
