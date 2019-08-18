@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="uk" vocab="http://schema.org/" typeof="FoodEstablishment">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Хліб Та Кава – бездріжджовий та цілозерновий хліб в Черкасах</title>
+  <title>Хліб та Кава – бездріжджовий та цілозерновий хліб в Черкасах</title>
   <meta property="description" name="Description" content="Кав’рня-пекарня в Черкасах, на Митниці. Ми продаємо бездріжджовий хліб власного виробництва. Робимо піцу на класичному та цілозерновому тісті з італійського борошна. В нас можна купити тістечка та замовити торт.">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <style>
@@ -38,9 +38,13 @@
     }
     header h2 {
       font-family: 'Montserrat', sans-serif;
+      margin-bottom: .5rem;
     }
     header h2 a {
       white-space: nowrap;
+    }
+    header p {
+      max-width: 50rem;
     }
 
     main {
@@ -96,14 +100,15 @@
   </style>
 </head>
 
-<body class="emoji">
+<body class="emoji" vocab="http://schema.org/" typeof="FoodEstablishment">
   <header>
-    <h1 property="name">Хліб Та Кава</h1>
+    <h1 property="name">Хліб та Кава</h1>
     <h2>Кав’рня-пекарня на Митниці, вул. Гагаріна 29,
       <span property="telephone" content="+380632746788">
         <a href="tel:+380632746788">+380 63 274 67 88</a>
       </span>
     </h2>
+    <p property="description">Ми продаємо бездріжджовий хліб власного виробництва. Робимо піцу на класичному та цілозерновому тісті з італійського борошна. В нас можна купити тістечка та замовити торт.</p>
   </header>
   <main>
     <section id="hlib">
@@ -167,8 +172,8 @@
       <span property="streetAddress">
         <a href="https://www.google.com/maps/place/%D0%A5%D0%BB%D1%96%D0%B1+%D1%82%D0%B0+%D0%BA%D0%B0%D0%B2%D0%B0/@49.4444817,32.0732726,19.56z/data=!4m5!3m4!1s0x40d14b3e91979c79:0x8b248ef62c61a59f!8m2!3d49.4444646!4d32.0738111">
           вул. Гагаріна 29
-        </a>,
-      </span>
+        </a>
+      </span>,
       <span property="addressLocality">Черкаси</span>,
       <span property="addressCountry">UA</span>
     </section>
